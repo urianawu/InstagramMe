@@ -1,0 +1,6 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "0ce76c104b5eaa73760575d7c1687274"
+build_time: [510110672, 356089000]
+inputs:
+  "/Users/Uriana/Projects/iOS/InstagramMe/InstagramMe/AppDelegate.swift": [510110670, 0]
+  "/Users/Uriana/Projects/iOS/InstagramMe/InstagramMe/ViewController.swift": [510110670, 0]
