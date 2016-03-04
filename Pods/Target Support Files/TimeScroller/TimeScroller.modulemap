@@ -1,0 +1,6 @@
+framework module TimeScroller {
+  umbrella header "TimeScroller-umbrella.h"
+
+  export *
+  module * { export * }
+}

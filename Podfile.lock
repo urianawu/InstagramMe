@@ -1,0 +1,19 @@
+PODS:
+  - Bolts/Tasks (1.6.0)
+  - Parse (1.12.0):
+    - Bolts/Tasks (~> 1.5)
+  - PathMenu (1.1.0)
+  - TimeScroller (2.0.1)
+
+DEPENDENCIES:
+  - Parse
+  - PathMenu
+  - TimeScroller
+
+SPEC CHECKSUMS:
+  Bolts: f52a250053bb517ca874523c3913776359ab3def
+  Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
+  PathMenu: 3743f569d97645c3eb673a67388d176258d183d5
+  TimeScroller: 27a9bd6f6f89ccf90ae416d4408e24988b78fbd8
+
+COCOAPODS: 0.39.0
