@@ -11,10 +11,49 @@ import Parse
 
 class Post: NSObject {
 
+    var imageFile: PFFile?
+    var author: String?
+    var authorProfileFile: PFFile?
+    var authorBackgroundFile: PFFile?
+    var createdAt: NSDate?
+    var caption: String?
+    var likesCount: Int?
+    var commentsCount: Int?
+    var user: PFUser?
+    
+    var object: PFObject!
+    
+    init(object: PFObject) {
+        self.user = (object["author"] as? PFUser)
+        self.object = object
+        self.imageFile = object["media"] as? PFFile
+        self.author = user?.username
+        if let profileFile = user?.valueForKey("profile") as? PFFile {
+            self.authorProfileFile = profileFile
+        }
+        if let coverFile = user?.valueForKey("cover") as? PFFile {
+            self.authorBackgroundFile = coverFile
+        }
+        self.caption = object["caption"] as? String
+        self.createdAt = object.createdAt
+        self.likesCount = object["likesCount"] as? Int
+        self.commentsCount = object["commentsCount"] as? Int
+
+    }
     /**
      * Other methods
      */
      
+    class func postsWithArray(array: [PFObject]) -> [Post] {
+        var posts = [Post]()
+        
+        for object in array {
+            posts.append(Post(object: object))
+        }
+        return posts
+    }
+
+    
      /**
      Method to add a user post to Parse (uploading image file)
      
@@ -54,4 +93,52 @@ class Post: NSObject {
         }
         return nil
     }
+    
+    class func resize(image: UIImage, newSize: CGSize) -> UIImage {
+        let resizeImageView = UIImageView(frame: CGRectMake(0, 0, newSize.width, newSize.height))
+        resizeImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        resizeImageView.image = image
+        
+        UIGraphicsBeginImageContext(resizeImageView.frame.size)
+        resizeImageView.layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+
 }
+
+extension NSDate {
+    func yearsFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Year, fromDate: date, toDate: self, options: []).year
+    }
+    func monthsFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Month, fromDate: date, toDate: self, options: []).month
+    }
+    func weeksFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.WeekOfYear, fromDate: date, toDate: self, options: []).weekOfYear
+    }
+    func daysFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Day, fromDate: date, toDate: self, options: []).day
+    }
+    func hoursFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Hour, fromDate: date, toDate: self, options: []).hour
+    }
+    func minutesFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Minute, fromDate: date, toDate: self, options: []).minute
+    }
+    func secondsFrom(date:NSDate) -> Int{
+        return NSCalendar.currentCalendar().components(.Second, fromDate: date, toDate: self, options: []).second
+    }
+    func offsetFrom(date:NSDate) -> String {
+        if yearsFrom(date)   > 0 { return "\(yearsFrom(date))y"   }
+        if monthsFrom(date)  > 0 { return "\(monthsFrom(date))M"  }
+        if weeksFrom(date)   > 0 { return "\(weeksFrom(date))w"   }
+        if daysFrom(date)    > 0 { return "\(daysFrom(date))d"    }
+        if hoursFrom(date)   > 0 { return "\(hoursFrom(date))h"   }
+        if minutesFrom(date) > 0 { return "\(minutesFrom(date))m" }
+        if secondsFrom(date) > 0 { return "\(secondsFrom(date))s" }
+        return ""
+    }
+}
+

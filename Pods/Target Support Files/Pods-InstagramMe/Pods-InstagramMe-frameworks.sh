@@ -85,12 +85,14 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-InstagramMe/Bolts.framework"
+  install_framework "Pods-InstagramMe/MBProgressHUD.framework"
   install_framework "Pods-InstagramMe/Parse.framework"
   install_framework "Pods-InstagramMe/PathMenu.framework"
   install_framework "Pods-InstagramMe/TimeScroller.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-InstagramMe/Bolts.framework"
+  install_framework "Pods-InstagramMe/MBProgressHUD.framework"
   install_framework "Pods-InstagramMe/Parse.framework"
   install_framework "Pods-InstagramMe/PathMenu.framework"
   install_framework "Pods-InstagramMe/TimeScroller.framework"

@@ -17,18 +17,10 @@
             <rect key="frame" x="0.0" y="0.0" width="357" height="184"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-an-I65">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kec-an-I65">
                     <rect key="frame" x="0.0" y="0.0" width="357" height="184"/>
                 </imageView>
-                <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msu-z2-sis">
-                    <rect key="frame" x="0.0" y="0.0" width="357" height="184"/>
-                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LHP-1k-imI">
-                        <rect key="frame" x="0.0" y="0.0" width="357" height="184"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    </view>
-                    <blurEffect style="light"/>
-                </visualEffectView>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="6tJ-L0-L9T">
+                <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample" translatesAutoresizingMaskIntoConstraints="NO" id="6tJ-L0-L9T">
                     <rect key="frame" x="13" y="105" width="40" height="40"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Ema-Yf-o9U"/>
@@ -56,13 +48,9 @@
                 <constraint firstItem="Kec-an-I65" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7Ku-BY-QWm"/>
                 <constraint firstAttribute="bottom" secondItem="Axs-gD-hEw" secondAttribute="bottom" id="7sy-qV-zQM"/>
                 <constraint firstAttribute="trailing" secondItem="Kec-an-I65" secondAttribute="trailing" id="DbT-tQ-NVz"/>
-                <constraint firstItem="msu-z2-sis" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JsS-HO-bQ8"/>
                 <constraint firstItem="6tJ-L0-L9T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="13" id="NJP-gZ-Eus"/>
-                <constraint firstItem="msu-z2-sis" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fc5-0Q-vQu"/>
                 <constraint firstItem="Axs-gD-hEw" firstAttribute="top" secondItem="6tJ-L0-L9T" secondAttribute="bottom" constant="8" id="hgF-ml-xo6"/>
-                <constraint firstAttribute="trailing" secondItem="msu-z2-sis" secondAttribute="trailing" id="sGf-Wk-o6E"/>
                 <constraint firstItem="Kec-an-I65" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="y5y-Ms-alg"/>
-                <constraint firstAttribute="bottom" secondItem="msu-z2-sis" secondAttribute="bottom" id="zxa-eH-7f5"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="255.5" y="77"/>

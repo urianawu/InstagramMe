@@ -17,6 +17,11 @@
 		C69377761C894C6900E6EDC8 /* TimelineHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C69377751C894C6900E6EDC8 /* TimelineHeaderView.xib */; };
 		C69377781C894C8100E6EDC8 /* TimelineHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69377771C894C8100E6EDC8 /* TimelineHeaderView.swift */; };
 		C693777B1C8A230700E6EDC8 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693777A1C8A230700E6EDC8 /* Post.swift */; };
+		C693777D1C8A2D9F00E6EDC8 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693777C1C8A2D9F00E6EDC8 /* ComposeViewController.swift */; };
+		C693777F1C8A35DE00E6EDC8 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C693777E1C8A35DE00E6EDC8 /* ImagePickerViewController.swift */; };
+		C69377811C8A3D5D00E6EDC8 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69377801C8A3D5D00E6EDC8 /* TimelineCell.swift */; };
+		C69377831C8A9BEF00E6EDC8 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69377821C8A9BEF00E6EDC8 /* InfiniteScrollActivityView.swift */; };
+		C69377851C8A9DEB00E6EDC8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69377841C8A9DEB00E6EDC8 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		C69377751C894C6900E6EDC8 /* TimelineHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TimelineHeaderView.xib; sourceTree = "<group>"; };
 		C69377771C894C8100E6EDC8 /* TimelineHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineHeaderView.swift; sourceTree = "<group>"; };
 		C693777A1C8A230700E6EDC8 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		C693777C1C8A2D9F00E6EDC8 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		C693777E1C8A35DE00E6EDC8 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		C69377801C8A3D5D00E6EDC8 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
+		C69377821C8A9BEF00E6EDC8 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
+		C69377841C8A9DEB00E6EDC8 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		EF222F2CDCA47630FC19FB27 /* Pods_InstagramMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstagramMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,8 +103,11 @@
 		C69377711C88FAC800E6EDC8 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C69377841C8A9DEB00E6EDC8 /* ProfileViewController.swift */,
 				C693776F1C8758B200E6EDC8 /* LoginViewController.swift */,
 				C69377731C88FAE900E6EDC8 /* TimelineViewController.swift */,
+				C693777C1C8A2D9F00E6EDC8 /* ComposeViewController.swift */,
+				C693777E1C8A35DE00E6EDC8 /* ImagePickerViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -104,6 +117,8 @@
 			children = (
 				C69377751C894C6900E6EDC8 /* TimelineHeaderView.xib */,
 				C69377771C894C8100E6EDC8 /* TimelineHeaderView.swift */,
+				C69377801C8A3D5D00E6EDC8 /* TimelineCell.swift */,
+				C69377821C8A9BEF00E6EDC8 /* InfiniteScrollActivityView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -248,11 +263,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69377831C8A9BEF00E6EDC8 /* InfiniteScrollActivityView.swift in Sources */,
 				C69377701C8758B200E6EDC8 /* LoginViewController.swift in Sources */,
+				C69377851C8A9DEB00E6EDC8 /* ProfileViewController.swift in Sources */,
 				C693775E1C8526CE00E6EDC8 /* AppDelegate.swift in Sources */,
 				C69377781C894C8100E6EDC8 /* TimelineHeaderView.swift in Sources */,
+				C693777D1C8A2D9F00E6EDC8 /* ComposeViewController.swift in Sources */,
+				C69377811C8A3D5D00E6EDC8 /* TimelineCell.swift in Sources */,
 				C69377741C88FAE900E6EDC8 /* TimelineViewController.swift in Sources */,
 				C693777B1C8A230700E6EDC8 /* Post.swift in Sources */,
+				C693777F1C8A35DE00E6EDC8 /* ImagePickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

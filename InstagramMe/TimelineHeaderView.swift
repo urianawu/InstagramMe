@@ -7,12 +7,40 @@
 //
 
 import UIKit
+import Parse
 
 class TimelineHeaderView: UIView {
 
     @IBOutlet var view: UIView!
     @IBOutlet weak var backgroundView: UIImageView!
     @IBOutlet weak var profileView: UIImageView!
+    
+    var user: PFUser! {
+        didSet {
+            if let imageFile = user.objectForKey("cover") as? PFFile {
+
+            imageFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                if error ==  nil {
+                    if let imageData = imageData {
+                        self.backgroundView.image = UIImage(data: imageData)
+                    }
+                }
+            }
+            }
+            if let profileFile = user.objectForKey("profile") as? PFFile {
+                print("setting?")
+
+            profileFile.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                if error ==  nil {
+                    if let imageData = imageData {
+                        self.profileView.image = UIImage(data: imageData)
+                    }
+                }
+            }
+            }
+
+        }
+    }
     override init(frame: CGRect) {
         super.init(frame: frame)
         xibSetup()
@@ -33,7 +61,6 @@ class TimelineHeaderView: UIView {
         // Adding custom subview on top of our view (over any custom drawing > see note below)
         addSubview(view)
         
-        
     }
     
     func loadViewFromNib() -> UIView {
@@ -44,5 +71,6 @@ class TimelineHeaderView: UIView {
         
         return view
     }
-
+    
+    
 }

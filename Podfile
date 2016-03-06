@@ -7,5 +7,6 @@ target 'InstagramMe' do
    pod 'Parse'
    pod 'PathMenu'
    pod 'TimeScroller'
+   pod 'MBProgressHUD'
 end
 
