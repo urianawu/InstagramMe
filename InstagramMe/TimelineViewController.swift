@@ -189,6 +189,7 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @IBAction func onFinishCompose(segue: UIStoryboardSegue) {
+        MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         if let vc = segue.sourceViewController as? ComposeViewController{
             var photo = UIImage()
             if let postPhoto: UIImage = vc.resizedPhoto {
@@ -199,6 +200,8 @@ class TimelineViewController: UIViewController, UITableViewDataSource, UITableVi
                 print(photo)
             }
             Post.postUserImage(photo, withCaption: vc.captionView.text, withCompletion: { (succeed: Bool, error: NSError?) -> Void in
+                MBProgressHUD.hideHUDForView(self.view, animated: true)
+
                 self.reloadPosts()
             })
         }
